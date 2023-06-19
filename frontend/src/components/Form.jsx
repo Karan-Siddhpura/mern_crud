@@ -19,7 +19,7 @@ function Form({
 
   const handleClick = () => {
     axios
-      .post("http://localhost:5000/save", input)
+      .post("https://mern-crud-nn6k.onrender.com/save", input)
       .then((res) => {
         console.log(`Data inserted Successfully`);
         setInput({
@@ -37,7 +37,7 @@ function Form({
   const handleUpdate = () => {
     console.log(listId);
     axios
-      .put(`http://localhost:5000/update/${listId}`, input)
+      .put(`https://mern-crud-nn6k.onrender.com/update/${listId}`, input)
       .then((res) => {
         console.log(`Data inserted Successfully`);
         setInput({

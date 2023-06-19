@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  color: #eee;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex: wrap;
+}
+
+.content {
+  font-size: 18px;
+  font-weight: 400;
+}

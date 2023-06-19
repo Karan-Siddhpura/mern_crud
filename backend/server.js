@@ -5,7 +5,7 @@ require("dotenv").config();
 const PORT = process.env.PORT;
 const url = process.env.MONGO_URI;
 const app = express();
-const baseUrl = "https://mern-crud-nn6k.onrender.com"
+const baseUrl = process.env.baseUrl;
 app.use(cors());
 app.use(express.json());
 
@@ -16,7 +16,7 @@ mongoose.connect(url).then((data) => {
     console.log(err);
 });
 
-app.use(`${baseUrl}/`, require("./routes/userRouter"))
+app.use("/https://mern-crud-nn6k.onrender.com", require("./routes/userRouter"))
 
 
 

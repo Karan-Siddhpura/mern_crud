@@ -23,6 +23,7 @@ function App() {
       .get("https://mern-crud-nn6k.onrender.com/get")
       .then((res) => {
         setUsers(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);

@@ -16,7 +16,7 @@ mongoose.connect(url).then((data) => {
     console.log(err);
 });
 
-app.use("/https://mern-crud-nn6k.onrender.com", require("./routes/userRouter"))
+app.use("/", require("./routes/userRouter"))
 
 
 

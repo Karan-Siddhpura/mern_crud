@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 
-
+const baseUrl = process.env.BASE_URL;
 function App() {
 
   const [users, setUsers] = useState([]);
@@ -20,7 +20,7 @@ function App() {
   });
   useEffect(() => {
     axios
-      .get("https://mern-crud-nn6k.onrender.com/get")
+      .get(`${baseUrl}/get`)
       .then((res) => {
         setUsers(res.data);
         console.log(res.data);

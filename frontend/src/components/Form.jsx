@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 
+const baseUrl = process.env.BASE_URL;
 function Form({
   setUpdateUI,
   input,
@@ -19,7 +20,7 @@ function Form({
 
   const handleClick = () => {
     axios
-      .post("https://mern-crud-nn6k.onrender.com/save", input)
+      .post(`${baseUrl}/save`, input)
       .then((res) => {
         console.log(`Data inserted Successfully`);
         setInput({
@@ -37,7 +38,7 @@ function Form({
   const handleUpdate = () => {
     console.log(listId);
     axios
-      .put(`https://mern-crud-nn6k.onrender.com/update/${listId}`, input)
+      .put(`${baseUrl}/update/${listId}`, input)
       .then((res) => {
         console.log(`Data inserted Successfully`);
         setInput({

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-// require("dotenv").config();
-// const baseUrl = process.env.baseUrl;
+
+const baseUrl = process.env.BASE_URL;
 function List({
   id,
   fname,
@@ -16,7 +16,7 @@ function List({
   const handleDelete = () => {
     console.log(id);
     axios
-      .delete(`https://mern-crud-nn6k.onrender.com/delete/${id}`)
+      .delete(`${baseUrl}/delete/${id}`)
       .then((res) => {
         console.log("Data deleted successfully");
         setUpdateUI((prevState) => !prevState);

@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const baseUrl = process.env.BASE_URL;
+const baseUrl = process.env.REACT_APP_BASE_URL;
 function List({
   id,
   fname,

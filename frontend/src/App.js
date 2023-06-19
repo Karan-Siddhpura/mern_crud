@@ -20,7 +20,7 @@ function App() {
   });
   useEffect(() => {
     axios
-      .get("http://localhost:5000/get")
+      .get("https://mern-crud-nn6k.onrender.com/get")
       .then((res) => {
         setUsers(res.data);
       })

@@ -16,7 +16,7 @@ mongoose.connect(url).then((data) => {
     console.log(err);
 });
 
-app.use(baseUrl, require("./routes/userRouter"))
+app.use(`${baseUrl}/`, require("./routes/userRouter"))
 
 
 
